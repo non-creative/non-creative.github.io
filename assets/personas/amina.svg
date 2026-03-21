@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e8472c"/>
+      <stop offset="100%" stop-color="#b53520"/>
+    </linearGradient>
+    <clipPath id="circle"><circle cx="60" cy="60" r="60"/></clipPath>
+  </defs>
+
+  <!-- Background -->
+  <circle cx="60" cy="60" r="60" fill="url(#bg)"/>
+
+  <g clip-path="url(#circle)">
+    <!-- Hair (behind head) -->
+    <ellipse cx="60" cy="50" rx="30" ry="35" fill="#f4a88a"/><ellipse cx="60" cy="38" rx="24" ry="20" fill="#f4a88a"/><rect x="30" y="60" width="60" height="30" rx="15" fill="#f4a88a"/>
+
+    <!-- Neck -->
+    <rect x="50" y="86" width="20" height="20" rx="8" fill="#8d5524"/>
+
+    <!-- Head -->
+    <ellipse cx="60" cy="66" rx="22" ry="25" fill="#8d5524"/>
+
+    <!-- Ears -->
+    <ellipse cx="38" cy="68" rx="5" ry="7" fill="#8d5524"/>
+    <ellipse cx="82" cy="68" rx="5" ry="7" fill="#8d5524"/>
+
+    <!-- Eyes -->
+    <ellipse cx="51" cy="64" rx="5" ry="5.5" fill="white"/>
+    <ellipse cx="69" cy="64" rx="5" ry="5.5" fill="white"/>
+    <circle cx="52" cy="65" r="3" fill="#1a1a1a"/>
+    <circle cx="70" cy="65" r="3" fill="#1a1a1a"/>
+    <circle cx="53" cy="63.5" r="1" fill="white"/>
+    <circle cx="71" cy="63.5" r="1" fill="white"/>
+
+    <!-- Eyebrows -->
+    <path d="M44 57 Q51 53 58 57" stroke="#1a1a1a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M62 57 Q69 53 76 57" stroke="#1a1a1a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+    <!-- Nose -->
+    <path d="M60 67 Q56 74 57 77 Q60 79 63 77 Q64 74 60 67" fill="#8d5524" stroke="#8d5524" stroke-width="1"/>
+    <path d="M57 77 Q60 80 63 77" stroke="#0004" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+
+    <!-- Mouth -->
+    <path d="M52 83 Q60 89 68 83" stroke="#c0705a" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+    <!-- Beard overlay -->
+    
+
+    <!-- Glasses overlay -->
+    
+
+    <!-- Shoulders / body -->
+    <ellipse cx="60" cy="118" rx="38" ry="22" fill="#8d5524" opacity="0.6"/>
+
+    <!-- Clothing hint -->
+    <ellipse cx="60" cy="125" rx="44" ry="28" fill="#2a2a2a" opacity="0.85"/>
+  </g>
+</svg>

@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme: apply saved preference before first paint to prevent flash -->
+  <script>
+    (function(){try{var t=localStorage.getItem('nk-theme');if(t==='dark'){document.documentElement.setAttribute('data-theme','dark')}else if(!t&&window.matchMedia('(prefers-color-scheme:dark)').matches){document.documentElement.setAttribute('data-theme','dark')}}catch(e){}})();
+  </script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+
+  <!-- Primary SEO -->
+  <title>Nikhil Kunnath — UI/UX Designer &amp; UX Researcher</title>
+  <meta name="description" content="Portfolio of Nikhil Kunnath, a UI/UX Designer and UX Researcher with a track record of delivering measurable results — +30% conversions, #3 App Store ranking, Top 2 Google ranking. Based in the UK."/>
+  <meta name="keywords" content="UI UX designer, UX researcher, product designer, Figma, mobile app design, web design portfolio, UI designer UK, UX designer portfolio, Nikhil Kunnath"/>
+  <meta name="author" content="Nikhil Kunnath"/>
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+  <link rel="canonical" href="https://nikhilkunnath.online/"/>
+
+  <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://nikhilkunnath.online/"/>
+  <meta property="og:title" content="Nikhil Kunnath — UI/UX Designer &amp; UX Researcher"/>
+  <meta property="og:description" content="UI/UX Designer with a track record of shipping products that move the needle. +30% conversions, #3 App Store at launch, Top 2 on Google. View the portfolio."/>
+  <meta property="og:image" content="https://nikhilkunnath.online/assets/og-image.jpg"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta property="og:image:alt" content="Nikhil Kunnath — UI/UX Designer portfolio"/>
+  <meta property="og:site_name" content="Nikhil Kunnath"/>
+  <meta property="og:locale" content="en_GB"/>
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Nikhil Kunnath — UI/UX Designer &amp; UX Researcher"/>
+  <meta name="twitter:description" content="UI/UX Designer with a track record of shipping products that move the needle. View the portfolio."/>
+  <meta name="twitter:image" content="https://nikhilkunnath.online/assets/og-image.jpg"/>
+
+  <!-- Structured Data — Person + WebSite + BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://nikhilkunnath.online/#person",
+        "name": "Nikhil Kunnath",
+        "jobTitle": "UI/UX Designer",
+        "description": "UI/UX Designer and UX Researcher with experience delivering measurable product outcomes across mobile apps, e-commerce, and SaaS platforms.",
+        "url": "https://nikhilkunnath.online/",
+        "sameAs": ["https://www.linkedin.com/in/nkunnath"],
+        "email": "nikhil.kunnath.official@gmail.com",
+        "knowsAbout": ["UI Design","UX Research","Figma","React","Product Design","User Testing","Information Architecture","Mobile App Design"],
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://nikhilkunnath.online/assets/Nikhil_qWBYh4V7IdTj81jooNt3N.jpeg"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://nikhilkunnath.online/#website",
+        "url": "https://nikhilkunnath.online/",
+        "name": "Nikhil Kunnath — UI/UX Designer Portfolio",
+        "description": "Portfolio showcasing UI/UX design and UX research case studies by Nikhil Kunnath.",
+        "author": { "@id": "https://nikhilkunnath.online/#person" },
+        "inLanguage": ["en","ar","zh-CN","nl","fr","de","hi","ja","es"]
+      },
+      {
+        "@type": "ProfilePage",
+        "@id": "https://nikhilkunnath.online/#profilepage",
+        "url": "https://nikhilkunnath.online/",
+        "name": "Nikhil Kunnath — UI/UX Designer Portfolio",
+        "isPartOf": { "@id": "https://nikhilkunnath.online/#website" },
+        "about": { "@id": "https://nikhilkunnath.online/#person" },
+        "mainEntity": { "@id": "https://nikhilkunnath.online/#person" }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+
+  <link rel="icon" href="favicon.ico" sizes="any"/>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"/>
+  <link rel="stylesheet" href="styles/main.css"/>
+  <style>
+    /* ── HERO: Big type + floating stats ── */
+    .hero-wrap {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: calc(var(--nav) + 56px) 32px 80px;
+    }
+
+    /* White edge vignette — sits on top of dots */
+    .hero-wrap::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 90% 80% at 50% 40%, transparent 45%, var(--white) 100%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: var(--max);
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    /* Name — slightly smaller */
+    .hero-name {
+      font-size: clamp(44px, 7vw, 96px);
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      line-height: 0.95;
+      color: var(--near-black);
+      margin-bottom: 20px;
+    }
+    .hero-name span { color: var(--near-black); }
+
+    .hero-role {
+      font-size: clamp(22px, 3vw, 36px);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 32px;
+      color: var(--near-black);
+    }
+    .hero-role .role-highlight {
+      color: var(--accent);
+    }
+
+    .hero-desc-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 64px;
+      flex-wrap: wrap;
+      margin-bottom: 52px;
+    }
+    .hero-bio {
+      max-width: 480px;
+      color: var(--mid-gray);
+      font-size: 17px;
+      line-height: 1.75;
+      flex-shrink: 0;
+    }
+
+    /* Floating stat pills */
+    .stat-pills {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+    .stat-pill {
+      background: var(--white);
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: 14px;
+      padding: 18px 24px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+      min-width: 130px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .stat-pill:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 36px rgba(0,0,0,0.1);
+    }
+    .stat-pill-num {
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .stat-pill-label {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--mid-gray);
+      line-height: 1.4;
+    }
+
+    .toolbox-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: var(--mid-gray);
+      margin-bottom: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .hero-name { font-size: clamp(36px, 11vw, 72px); }
+      .hero-desc-row { gap: 32px; }
+      .hero-bio { max-width: 100%; }
+      .stat-pill { min-width: 110px; }
+      .stat-pill-num { font-size: 28px; }
+    }
+    @media (max-width: 480px) {
+      .hero-wrap { padding: calc(var(--nav) + 32px) 20px 60px; }
+      .stat-pills { gap: 10px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo notranslate" translate="no">nk.</a>
+    <ul class="nav-links">
+      <li><a href="about/index.html">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+    </ul>
+    <button class="theme-toggle notranslate" id="themeToggle" aria-label="Toggle dark mode" translate="no">
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="icon-sun"  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </button>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-drawer" id="navDrawer">
+  <a href="about/index.html">About</a>
+  <a href="#projects">Projects</a>
+</div>
+
+<!-- ── HERO ── -->
+<div class="hero-wrap dot-target">
+  <div class="hero-inner">
+
+    <div class="fade-up">
+      <h1 class="hero-name">Hi, I'm<br>Nikhil Kunnath.</h1>
+      <p class="hero-role"><span class="role-highlight">UI/UX Designer</span> &amp; Researcher</p>
+    </div>
+
+    <div class="hero-desc-row fade-up">
+      <p class="hero-bio">I design digital journeys by focusing on user needs, accessibility, and clean, impactful visuals. Every project is a chance to simplify and elevate the user experience.</p>
+
+      <!-- Animated stat pills -->
+      <div class="stat-pills">
+        <div class="stat-pill">
+          <div class="stat-pill-num" data-count="20" data-suffix="+">0</div>
+          <div class="stat-pill-label">Projects<br>delivered</div>
+        </div>
+        <div class="stat-pill">
+          <div class="stat-pill-num" data-count="30" data-suffix="%">0</div>
+          <div class="stat-pill-label">Avg. conversion<br>uplift</div>
+        </div>
+        <div class="stat-pill">
+          <div class="stat-pill-num" data-count="35" data-suffix="%">0</div>
+          <div class="stat-pill-label">Purchase<br>increase</div>
+        </div>
+        <div class="stat-pill">
+          <div class="stat-pill-num" data-count="3" data-suffix=" wks">0</div>
+          <div class="stat-pill-label">Fastest<br>delivery</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fade-up">
+      <p class="toolbox-label">My toolbox</p>
+      <div class="tool-chips">
+        <span class="chip">
+          <svg viewBox="0 0 38 57" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 28.5a9.5 9.5 0 1 1 19 0 9.5 9.5 0 0 1-19 0z" fill="#1ABCFE"/>
+            <path d="M0 47.5A9.5 9.5 0 0 1 9.5 38H19v9.5a9.5 9.5 0 0 1-19 0z" fill="#0ACF83"/>
+            <path d="M19 0v19h9.5a9.5 9.5 0 0 0 0-19H19z" fill="#FF7262"/>
+            <path d="M0 9.5A9.5 9.5 0 0 0 9.5 19H19V0H9.5A9.5 9.5 0 0 0 0 9.5z" fill="#F24E1E"/>
+            <path d="M0 28.5A9.5 9.5 0 0 0 9.5 38H19V19H9.5A9.5 9.5 0 0 0 0 28.5z" fill="#A259FF"/>
+          </svg>Figma
+        </span>
+        <span class="chip">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <rect width="24" height="24" rx="5" fill="#FF61F6"/>
+            <path d="M14.5 8.27l-2.45 4 2.6 4.23c.04.07.04.15 0 .22-.04.07-.12.1-.2.1h-1.8c-.26 0-.5-.14-.63-.37L10.52 13.6l-1.63 2.85c-.13.23-.37.37-.63.37H6.35c-.08 0-.16-.04-.2-.1-.04-.07-.04-.15 0-.22l2.58-4.16-2.45-4.07c-.04-.07-.04-.15 0-.22.04-.07.12-.1.2-.1h1.7c.27 0 .52.15.64.38l1.47 2.73 1.49-2.73c.12-.24.37-.38.64-.38h1.7c.08 0 .16.04.2.1.04.07.04.15-.02.21z" fill="#fff"/>
+          </svg>Adobe XD
+        </span>
+        <span class="chip">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <rect width="24" height="24" rx="5" fill="#001E36"/>
+            <path d="M6 17V7.5h2.5C10.43 7.5 12 8.8 12 10.85c0 2.12-1.57 3.37-3.6 3.37H7.7V17H6zm1.7-4.28h.72c1.1 0 1.88-.57 1.88-1.87 0-1.25-.78-1.85-1.82-1.85H7.7v3.72zm6.05 1.08c0-1.56 1.08-2.64 2.72-2.64.35 0 .65.05.88.13V9.74c0-.07.03-.1.1-.1h1.45c.07 0 .1.03.1.1V17c0 .07-.03.1-.1.1H17.5c-.06 0-.09-.03-.1-.08l-.06-.5c-.34.4-.82.68-1.52.68-1.32 0-2.07-.98-2.07-2.4zm3.6.74v-2.5a1.8 1.8 0 0 0-.76-.17c-.8 0-1.28.56-1.28 1.45 0 .94.44 1.47 1.12 1.47.4 0 .7-.1.92-.25z" fill="#31A8FF"/>
+          </svg>Photoshop
+        </span>
+        <span class="chip">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <rect width="24" height="24" rx="5" fill="#300"/>
+            <path d="M8.52 15.5H5.48l-.64 2.1c-.02.08-.08.1-.16.1H3.16c-.1 0-.12-.05-.1-.14L6.05 8.42c.05-.17.09-.32.12-.82 0-.07.04-.1.1-.1h2.1c.08 0 .12.03.14.1l3.28 10.04c.02.08 0 .13-.09.13H9.14c-.07 0-.12-.03-.14-.09L8.52 15.5zm-2.68-1.66h2.28L7 9.73 5.84 13.84zm8.04-5.5c-.5 0-.9-.38-.9-.9 0-.53.4-.9.9-.9s.9.37.9.9c0 .52-.4.9-.9.9zm-.79 1.17c0-.07.04-.1.1-.1h1.53c.07 0 .1.03.1.1v8.09c0 .08-.03.1-.1.1H13.2c-.08 0-.11-.02-.11-.1V9.51z" fill="#FF9A00"/>
+          </svg>Illustrator
+        </span>
+        <span class="chip">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.5 3.5v17a1.5 1.5 0 0 0 3 0v-17a1.5 1.5 0 0 0-3 0z" fill="#F9AB00"/>
+            <path d="M19.5 11.5v9a1.5 1.5 0 0 0 3 0v-9a1.5 1.5 0 0 0-3 0z" fill="#E37400"/>
+            <circle cx="4" cy="19" r="2.5" fill="#E37400"/>
+          </svg>Analytics
+        </span>
+        <span class="chip">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <rect width="24" height="24" rx="12" fill="#FF3C00"/>
+            <path d="M7 14c0-2.2 1.3-4.1 3.2-5l.8 1.4C9.5 11 9 12 9 13c0 1.7 1.3 3 3 3 .5 0 1-.1 1.4-.4l.8 1.4C13.5 17.6 12.8 18 12 18c-2.8 0-5-2.2-5-4zm5-8c2.8 0 5 2.2 5 5 0 1.5-.7 2.9-1.8 3.8l-.8-1.4c.7-.6 1.1-1.5 1.1-2.4 0-1.7-1.3-3-3-3-.5 0-1 .1-1.4.4L11.2 7C11.5 6.4 12.2 6 12 6z" fill="white"/>
+          </svg>Hotjar
+        </span>
+        <span class="chip">
+          <svg viewBox="-11.5 -10.232 23 20.463" xmlns="http://www.w3.org/2000/svg">
+            <circle r="2.05" fill="#61DAFB"/>
+            <g fill="none" stroke="#61DAFB" stroke-width="1">
+              <ellipse rx="11" ry="4.2"/>
+              <ellipse rx="11" ry="4.2" transform="rotate(60)"/>
+              <ellipse rx="11" ry="4.2" transform="rotate(120)"/>
+            </g>
+          </svg>React
+        </span>
+        <span class="chip">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.8 24.6l.17-.24 7.68-13.9.02-.05-3.23-6.03c-.24-.45-.91-.45-1.15 0L5.8 24.6z" fill="#FFA000"/>
+            <path d="M5.8 24.6l.18-.24 7.68-13.9-3.81-3.81L5.8 24.6z" fill="#F57F17"/>
+            <path d="M16.3 6.98l-3.12 3.48 3.12 5.67 8.65-2.95-8.65-6.2z" fill="#FFA000"/>
+            <path d="M5.8 24.6l10.5-17.62 8.65 6.2-11.97 2.83L5.8 24.6z" fill="#FFCA28"/>
+          </svg>Firebase
+        </span>
+      </div>
+    </div>
+
+    <div class="hero-cta fade-up" style="margin-top:40px;">
+      <a href="#projects" class="btn btn-primary">View Projects</a>
+      <a href="about/index.html" class="btn btn-secondary">About me</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span class="marquee-item">UI/UX Design <span class="marquee-dot">·</span></span>
+    <span class="marquee-item">User Research <span class="marquee-dot">·</span></span>
+    <span class="marquee-item">Design Systems <span class="marquee-dot">·</span></span>
+    <span class="marquee-item">Prototyping <span class="marquee-dot">·</span></span>
+    <span class="marquee-item">Web Development <span class="marquee-dot">·</span></span>
+    <span class="marquee-item">Mobile Design <span class="marquee-dot">·</span></span>
+    <span class="marquee-item">Strategy &amp; Innovation <span class="marquee-dot">·</span></span>
+    <span class="marquee-item">E-Commerce <span class="marquee-dot">·</span></span>
+    <span class="marquee-item">SEO &amp; Performance <span class="marquee-dot">·</span></span>
+    <span class="marquee-item">Accessibility <span class="marquee-dot">·</span></span>
+    <span class="marquee-item">UI/UX Design <span class="marquee-dot">·</span></span>
+    <span class="marquee-item">User Research <span class="marquee-dot">·</span></span>
+    <span class="marquee-item">Design Systems <span class="marquee-dot">·</span></span>
+    <span class="marquee-item">Prototyping <span class="marquee-dot">·</span></span>
+    <span class="marquee-item">Web Development <span class="marquee-dot">·</span></span>
+    <span class="marquee-item">Mobile Design <span class="marquee-dot">·</span></span>
+    <span class="marquee-item">Strategy &amp; Innovation <span class="marquee-dot">·</span></span>
+    <span class="marquee-item">E-Commerce <span class="marquee-dot">·</span></span>
+    <span class="marquee-item">SEO &amp; Performance <span class="marquee-dot">·</span></span>
+    <span class="marquee-item">Accessibility <span class="marquee-dot">·</span></span>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="section section--mint dot-target" id="services">
+  <div class="container">
+    <div class="fade-up">
+      <p class="eyebrow">What I do</p>
+      <h2 style="max-width:700px;">Design, strategy, and innovation tailored to your needs.</h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-item fade-up">
+        <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="6" y="28" width="36" height="12" rx="2"/><rect x="9" y="16" width="30" height="12" rx="2"/><rect x="13" y="6" width="22" height="10" rx="2"/>
+        </svg>
+        <p class="service-title">Design Systems</p>
+        <p class="service-desc">Need consistency and speed? I'll set up scalable design systems that keep everything looking sharp and running smoothly.</p>
+      </div>
+      <div class="service-item fade-up">
+        <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="20" cy="20" r="12"/><path d="M29 29l9 9M14 20h12M20 14v12"/>
+        </svg>
+        <p class="service-title">UX Research</p>
+        <p class="service-desc">I dig deep into what users really want, then turn those insights into user journeys, personas, and designs that just make sense.</p>
+      </div>
+      <div class="service-item fade-up">
+        <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="4" y="8" width="28" height="20" rx="2"/><path d="M10 28v6m8-6v6M6 34h16"/><rect x="34" y="18" width="10" height="18" rx="2"/><path d="M37 18v-2a2 2 0 0 1 4 0v2"/>
+        </svg>
+        <p class="service-title">Web and Mobile Design</p>
+        <p class="service-desc">Whether it's a sleek website or a mobile app, I'll make it responsive, intuitive, and user-friendly.</p>
+      </div>
+      <div class="service-item fade-up">
+        <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="8" y="6" width="20" height="32" rx="3"/><path d="M12 10h12M12 14h8M12 22h12M12 26h8"/><path d="M30 24l8-8M30 24h6v-6"/>
+        </svg>
+        <p class="service-title">Prototyping</p>
+        <p class="service-desc">I'll bring your ideas to life with high-fidelity prototypes using tools like Figma and Adobe XD.</p>
+      </div>
+      <div class="service-item fade-up">
+        <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="6" y="8" width="36" height="24" rx="2"/><path d="M6 32h36M18 40h12M24 32v8M14 20l5 5 10-10"/>
+        </svg>
+        <p class="service-title">Workshops and Training</p>
+        <p class="service-desc">Want your team to level up? I can teach them how to master tools like Figma and streamline their workflow.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="section dot-target" id="projects">
+  <div class="container">
+    <div class="fade-up">
+      <p class="eyebrow">Featured Projects</p>
+      <h2>Explore some of the professional projects I've delivered</h2>
+    </div>
+    <div class="projects-grid">
+      <a href="ofcourse/index.html" class="project-card fade-up">
+        <img class="project-card-img" loading="lazy" src="assets/Ofcourse_1UNvsoVSvxRWRj82d-V58.webp" alt="OfCourse Kuwait — UI/UX design case study, meal delivery app"/>
+        <div class="project-card-body">
+          <p class="project-card-tag">UX Research · UI Design</p>
+          <p class="project-card-title">OfCourse Kuwait</p>
+          <p class="project-card-desc">Healthy, fresh, and well-balanced quick food. Ranked #3 in Kuwait's Food &amp; Drinks at launch.</p>
+          <span class="project-card-link">View case study →</span>
+        </div>
+      </a>
+      <a href="zukis/index.html" class="project-card fade-up">
+        <img class="project-card-img" loading="lazy" src="assets/Zukis_y39znSmIYzQVS8l-9m2Jr.webp" alt="Zukis Restaurant — full-stack design and SEO case study"/>
+        <div class="project-card-body">
+          <p class="project-card-tag">Full-Stack Design · SEO</p>
+          <p class="project-card-title">Zukis Restaurant</p>
+          <p class="project-card-desc">The unique tastes of traditional Turkish cuisine. Top 2 on Google within weeks of launch.</p>
+          <span class="project-card-link">View case study →</span>
+        </div>
+      </a>
+      <a href="maxfibre/index.html" class="project-card fade-up">
+        <img class="project-card-img" loading="lazy" src="assets/Maxfibre_jBhRORHh6UdUN0UcDY1Fm.webp" alt="Maxfibre Broadband — UX redesign, +30% conversion rate"/>
+        <div class="project-card-body">
+          <p class="project-card-tag">UX Research · Lead Design</p>
+          <p class="project-card-title">Maxfibre Broadband</p>
+          <p class="project-card-desc">Maximum broadband speeds with maximum savings. +30% conversions, −25% drop-off.</p>
+          <span class="project-card-link">View case study →</span>
+        </div>
+      </a>
+      <a href="cocopalms/index.html" class="project-card fade-up">
+        <img class="project-card-img" loading="lazy" src="assets/Cocopalms_0x435l6fsR9oth1LNIXIF.webp" alt="Cocopalms — e-commerce and services platform UX design"/>
+        <div class="project-card-body">
+          <p class="project-card-tag">E-Commerce · Product Design</p>
+          <p class="project-card-title">Cocopalms</p>
+          <p class="project-card-desc">Simplified shopping experience. +35% purchases, 70% mobile traffic.</p>
+          <span class="project-card-link">View case study →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section section--gray dot-target">
+  <div class="container">
+    <div class="fade-up"><p class="eyebrow">Testimonials</p><h2>What people say</h2></div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card fade-up">
+        <div class="testimonial-quote">"</div>
+        <p class="testimonial-text">Working with Nikhil has been a great experience. He is a unique blend; methodical and diligent with his thought process and creative with his design style, which culminates in a fast and accurate design that enabled us to produce numerous websites.</p>
+        <div class="testimonial-author">
+          <img class="testimonial-avatar" loading="lazy" src="assets/Matt_d2DqPwWF0C_pSKwqGTZke.jpeg" alt="Matthew Walker"/>
+          <div><p class="testimonial-name">Matthew Walker</p><p class="testimonial-role">Marketing Manager</p></div>
+        </div>
+      </div>
+      <div class="testimonial-card fade-up">
+        <div class="testimonial-quote">"</div>
+        <p class="testimonial-text">He has a talent for turning complex requirements into intuitive, user-friendly designs. Nikhil is highly collaborative, open to feedback, and reliable in meeting deadlines. Working with him made a real difference to the quality of our projects.</p>
+        <div class="testimonial-author">
+          <img class="testimonial-avatar" loading="lazy" src="assets/1730583324994_8E1afDdH3LyUfQzPCljz1.jpeg" alt="Aakash MS"/>
+          <div><p class="testimonial-name">Aakash MS</p><p class="testimonial-role">Senior Web Developer</p></div>
+        </div>
+      </div>
+      <div class="testimonial-card fade-up">
+        <div class="testimonial-quote">"</div>
+        <p class="testimonial-text">His ability to repeatedly create visually stunning and intuitive user interfaces, on brief and in a short period of time, is very impressive. He will be a valuable asset to any team.</p>
+        <div class="testimonial-author">
+          <img class="testimonial-avatar" loading="lazy" src="assets/1516495816157_dKjU7NACf2OC1YrX4Krg6.jpeg" alt="Bruce Maclean"/>
+          <div><p class="testimonial-name">Bruce Maclean</p><p class="testimonial-role">Sales &amp; Marketing Director</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section dot-target">
+  <div class="container">
+    <div class="fade-up" style="max-width:600px;">
+      <p class="eyebrow">Contact</p>
+      <h2>Let's work together</h2>
+      <p class="body-md" style="margin-top:14px;max-width:480px;">I'm always up for new projects and connections. If you're looking for a designer who brings both technical expertise and a human touch. Let's chat.</p>
+      <div class="contact-links">
+        <a href="mailto:nikhil.kunnath.official@gmail.com" class="contact-link">
+          <img src="assets/4550857_email_gmail_mail_sending_yahoo_icon_fpWI31_f5WySmwrllPSsp.svg" alt="Email"/>
+          nikhil.kunnath.official@gmail.com
+        </a>
+        <a href="https://linkedin.com/in/nkunnath" target="_blank" rel="noopener" class="contact-link">
+          <img src="assets/1964405_linkedin_logo_media_social_icon_0TjLdwQFYblhfqQ-_rAzj.svg" alt="LinkedIn"/>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <span class="footer-logo notranslate" translate="no">nk.</span>
+    <span class="footer-copy">© 2026 Nikhil Kunnath</span>
+  </div>
+</footer>
+
+<script src="scripts/main.js"></script>
+<script>
+  const counters = document.querySelectorAll('.stat-pill-num[data-count]');
+  const counterObs = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      counterObs.unobserve(entry.target);
+      const el = entry.target;
+      const target = parseInt(el.dataset.count, 10);
+      const suffix = el.dataset.suffix || '';
+      const duration = 1200;
+      const stepTime = 16;
+      const steps = Math.round(duration / stepTime);
+      let current = 0;
+      const increment = target / steps;
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          current = target;
+          clearInterval(timer);
+        }
+        el.textContent = Math.round(current) + suffix;
+      }, stepTime);
+    });
+  }, { threshold: 0.5 });
+
+  counters.forEach(c => counterObs.observe(c));
+</script>
+<script src="scripts/translate.js"></script>
+</body>
+</html>
